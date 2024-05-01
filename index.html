@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <script src="./Jss/cmdDo.js"></script>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta charset="UTF-8">
+    <title>Mc指令自动补全</title>
+    <link rel="stylesheet" type="text/css" href="Css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://fastly.jsdelivr.net/gh/FortAwesome/Font-Awesome@6.5.2/css/all.min.css">
+  </head>
+  <body>
+    <div class="mainWindow">
+      <label for="mcf"><i class="fa-solid fa-code"></i></label>
+      <div contenteditable id="mcf" placeholder="code here.."></div><br>
+      <i class="fa-solid fa-file"></i>
+      <pre id="outBox"># 等待提交..</pre>
+    </div>
+      <!-- div没有value 所以改用innerText -->
+      <button type="button" onclick="start( /* mcf.value */mcf.innerText, outBox )">提交</button>
+    <script src="./Jss/start.js"></script>
+    <footer>
+      <p><b>Copyright (c) 2024 FreeDayO</b><br></p>
+    </footer>
+    <!-- <s>临时样式！FreeDayO美工组在写了</s> -->
+  </body>
+</html>
