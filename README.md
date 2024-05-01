@@ -12,7 +12,7 @@ copyright (c) 2024 FreeDayO
 # API
 cmdDo.js 提供了一个函数和一个数组
 ### startup 函数
-```js/javascript
+```js
 function startup( mcfunction ){...}
 ```
 mcfunction指向要自动补充mcfunction文本<br>
