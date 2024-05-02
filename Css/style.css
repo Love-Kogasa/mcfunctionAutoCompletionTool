@@ -1,98 +1,104 @@
-/* 桌面端配置在67行 */
-
+@charset "UTF-8";
+/* 桌面端配置在74行 */
 * {
-	font-size: 64px;
+  font-size: 64px;
 }
+
 body {
-	background: #555;
-	/* background: url() no-repeat fixed; */
-	color: white;
+  background: #555;
+  /* background: url() no-repeat fixed; */
+  color: white;
 }
 
 div#mcf {
-	padding: 12px;
-	width: 100%;
-	min-height: calc(25vh);
-	border-radius: 10px;
-	background: #444;
-	color: white;
-	caret-color: yellow;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-	&:empty::before {
-		content: attr(placeholder);
-		color: grey;
-	}
+  padding: 12px;
+  width: 100%;
+  min-height: 25vh;
+  border-radius: 10px;
+  background: #444;
+  color: white;
+  caret-color: yellow;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+div#mcf:empty::before {
+  content: attr(placeholder);
+  color: grey;
+}
+
 button {
-	padding: 12px;
-	font-size: 55px;
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-	user-select: none;
-	position: absolute;
-	background: skyblue;
-	top: calc(32vh);
-	right: 12px;
-	&:hover, &:focus {
-		background: deepskyblue;
-	}
-	&:active {
-		background: yellow;
-	}
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  padding: 12px;
+  font-size: 55px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  background: skyblue;
+  top: 32vh;
+  right: 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+button:hover, button:focus {
+  background: deepskyblue;
+}
+button:active {
+  background: yellow;
+}
+
 footer {
-	text-align: center;
+  text-align: center;
 }
+
 #outBox {
-	padding: 20px;
-	background: darkgrey;
-	border-radius: 10px;
-	font-size: 48px;
-	color: black;
-	width: 96%;
-	min-height: calc(25vh);
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  padding: 20px;
+  background: darkgrey;
+  border-radius: 10px;
+  font-size: 48px;
+  color: black;
+  width: 96%;
+  min-height: 25vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
 .mainWindow {
-	display: flex;
-	width: calc(80vw);
-	flex-direction: column;
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
 }
+
 .fa-solid {
-	text-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  text-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
 /* 适配桌面端 */
 @media screen and (min-width: 1000px) {
-	body {
-		/* background: url() no-repeat fixed; */
-	}
-	* {
-		font-size: 20px;
-	}
-	.mainWindow {
-		/* display: inline-flex; */
-		flex-direction: row;
-		width: 100%;
-	}
-	.fa-solid {
-		margin-left: 8px;
-		margin-right: 8px;
-	}
-	#outBox {
-		/* margin-top: -1px; */
-		width: calc(38vw);
-		min-height: calc(25vh);
-		font-size: 22px;
-	}
-	button {
-		font-size: 24px;
-		right: calc(5vw);
-	}
-	div#mcf {
-		width: calc(38vw);
-		min-height: calc(25vh);
-	}
+  body {
+    /* background: url() no-repeat fixed; */
+  }
+  * {
+    font-size: 20px;
+  }
+  .mainWindow {
+    /* display: inline-flex; */
+    flex-direction: row;
+    width: 100%;
+  }
+  .fa-solid {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  #outBox {
+    /* margin-top: -1px; */
+    width: 38vw;
+    min-height: 25vh;
+    font-size: 22px;
+  }
+  button {
+    font-size: 24px;
+    right: 5vw;
+  }
+  div#mcf {
+    width: 38vw;
+    min-height: 25vh;
+  }
 }
