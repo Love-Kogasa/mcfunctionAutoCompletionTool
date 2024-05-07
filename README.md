@@ -28,6 +28,7 @@ mcfunction指向要自动补充mcfunction文本<br>
 | Love-Kogasa  | Js部分 |
 | XiaozhiSans  | style和ui布局 |
 | butian  | 提供帮助 |
+| teaSummer | 扩充指令列表 |
 | ~~freeLucker~~  | ~~摸鱼~~ |
 ***
 我们很欢迎您将本作品放到您自己的工具站上<br>
