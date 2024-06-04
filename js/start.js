@@ -1,4 +1,6 @@
-function start( mcf, outEle ){
+import {startup} from "./cmdDo.js";
+
+globalThis.start = function( mcf, outEle ){
     if ( mcf == "" ){
         outEle.innerHTML = "#文件不能为空哦w~"
         return null

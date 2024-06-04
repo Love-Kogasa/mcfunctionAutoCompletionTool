@@ -1,79 +1,5 @@
-var cmdList = [
-    "?",
-    "alwaysday",
-    "camera",
-    "camerashake",
-    "clear",
-    "clearspawnpoint",
-    "clone",
-    "connect",
-    "damage",
-    "daylock",
-    "deop",
-    "dialogue",
-    "difficulty",
-    "effect",
-    "enchant",
-    "event",
-    "execute",
-    "fill",
-    "fog",
-    "function",
-    "gamemode",
-    "gamerule",
-    "gametest",
-    "give",
-    "help",
-    "hud",
-    "inputpermission",
-    "kick",
-    "kill",
-    "list",
-    "locate",
-    "loot",
-    "me",
-    "mobevent",
-    "msg",
-    "music",
-    "op",
-    "particle",
-    "playanimation",
-    "playsound",
-    "recipe",
-    "reload",
-    "replaceitem",
-    "ride",
-    "say",
-    "schedule",
-    "scoreboard",
-    "script",
-    "scriptevent",
-    "setblock",
-    "setmaxplayers",
-    "setworldspawn",
-    "spawnpoint",
-    "spreadplayers",
-    "stopsound",
-    "structure",
-    "summon",
-    "tag",
-    "teleport",
-    "tell",
-    "tellraw",
-    "testfor",
-    "testforblock",
-    "testforblocks",
-    "tickingarea",
-    "time",
-    "title",
-    "titleraw",
-    "toggledownfall",
-    "tp",
-    "w",
-    "weather",
-    "wsserver",
-    "xp"
-]
+import data from "../data/cmdList.json" with {type:"json"};
+var cmdList = data;
 
 function similar(s, t, f) {
     if (!s || !t) {
@@ -113,13 +39,13 @@ function similar(s, t, f) {
     return res.toFixed(f)
 }
 
-function startup( inputText ){
+export function startup( inputText ){
     let num = 0
     let ret = []
     let commands = inputText.trim().split( "\n" )
-    for( cmd of commands ){
+    for(let cmd of commands ){
         let similarArr = []
-        for( tCmd of cmdList ){
+        for(let tCmd of cmdList ){
             similarArr.push( similar( tCmd, cmd.split(" ")[0] ) )
         }
         let slr = Math.max.apply( null, similarArr )
