@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("../node_modules/mcfhighlight/code.css");
+@import url("../plugins/mcfhighlight/code.css");
 /* 桌面端配置在74行 */
 * {
   font-size: 64px;

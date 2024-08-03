@@ -1,6 +1,6 @@
 import("./cmdDo.js").then(cmdDo => startup = cmdDo.startup);
 import("../data/cmdList.js").then(data => cmdList = data.cmdList);
-import("../node_modules/mcfhighlight/index.js").then(data => mcfhl = data.default);
+import("../plugins/mcfhighlight/index.js").then(data => mcfhl = data.default);
 
 const start = function( mcf, outEle ){
     if ( mcf == "" ){
