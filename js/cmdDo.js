@@ -1,6 +1,3 @@
-import data from "../data/cmdList.json" with {type:"json"};
-var cmdList = data;
-
 function similar(s, t, f) {
     if (!s || !t) {
         return 0
