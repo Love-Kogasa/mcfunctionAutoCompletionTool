@@ -43,7 +43,7 @@ export function startup( inputText ){
     for(let cmd of commands ){
         let similarArr = []
         for(let tCmd of cmdList ){
-            similarArr.push( similar( tCmd, cmd.split(" ")[0] ) )
+            similarArr.push( similar( tCmd, cmd.split(" ")[0].toLowerCase() ) )
         }
         let slr = Math.max.apply( null, similarArr )
         if( slr !== 0 && cmd[0] !== "#" ){

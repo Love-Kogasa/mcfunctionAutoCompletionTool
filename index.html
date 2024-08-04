@@ -3,6 +3,7 @@
   <head>
     <script type="text/javascript" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/start.js"></script>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/downloadjs/1.4.8/download.min.js"></script>
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <meta charset="UTF-8">
     <title>Mc指令自动补全</title>
@@ -16,6 +17,10 @@
       <div id="resultBox"><pre><code id="result"><span class="mcf-note"># 等待提交..</span></code></pre></div>
       <!-- div没有value 所以改用innerText -->
       <button type="button" onclick="start( /* mcf.value */mcf.innerText, result )">提交</button>
+      <button style="top : 7vh;" onclick="(async function( text ){
+        await navigator.clipboard.writeText( text )
+      })( result.textContent )">复制</button>
+      <button style="top : 14vh;" onclick="download( result.textContent, 'code.mcfunction' )">保存</button>
     </main>
     <footer>
       <p><b>Copyright (c) 2024 FreeDayO</b><br></p>
