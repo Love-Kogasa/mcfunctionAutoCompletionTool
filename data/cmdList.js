@@ -1,3 +1,4 @@
+    
 export const cmdList = [
     "?",
     "ability",
@@ -26,6 +27,7 @@ export const cmdList = [
     "clearspawnpoint",
     "clone",
     "closechat",
+    "closewebsocket",
     "code",
     "codebuilder",
     "codebuilder_actorinfo",
@@ -69,6 +71,7 @@ export const cmdList = [
     "getchunkdata",
     "getchunks",
     "geteduclientinfo",
+    "geteduserverinfo",
     "getitemcount",
     "getitemdetail",
     "getitemspace",
@@ -122,6 +125,7 @@ export const cmdList = [
     "reloadconfig",
     "replace",
     "replaceitem",
+    "resourceuri",
     "resupply",
     "return",
     "ride",
@@ -193,5 +197,5 @@ export const cmdList = [
     "worldborder",
     "worldbuilder",
     "wsserver",
-    "xp"
+    "xp",
 ]
